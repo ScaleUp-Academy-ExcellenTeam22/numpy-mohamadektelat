@@ -1,0 +1,17 @@
+import numpy as np
+
+
+def build_matrix(rows, columns) -> (int, int):
+    """
+    This program creates a rows x columns matrix,in which the elements on the borders will be equal to 1, and inside 0.
+    :param rows:
+    :param columns:
+    :return: a rows x columns matrix,in which the elements on the borders will be equal to 1, and inside 0.
+    """
+    matrix = np.zeros((rows, columns), dtype=int)
+    matrix[:, [0, -1]] = matrix[[0, -1]] = 1
+    return matrix
+
+
+if __name__ == '__main__':
+    print(build_matrix(10, 10))
