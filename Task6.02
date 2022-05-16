@@ -1,0 +1,7 @@
+import numpy as np
+
+"""
+This program creates a vector of length 10 with values evenly distributed between 5 and 50.
+"""
+if __name__ == '__main__':
+    print(np.linspace(5, 50, 10))
