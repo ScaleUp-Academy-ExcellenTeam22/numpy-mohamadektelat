@@ -1,0 +1,26 @@
+from PIL import Image, ImageDraw, ImageColor
+
+# colors.
+RED = ImageColor.getrgb("red")
+WHITE = ImageColor.getrgb("white")
+BLUE = ImageColor.getrgb("blue")
+
+
+def french(width=300, height=200):
+    """
+    This function Creates a French flag using NumPy and then convert it to an image.
+    :param width:
+    :param height:
+    :return: nothing.
+    """
+    flag = Image.new("RGB", (width, height))
+    p, q = width // 3, 2 * width // 3  # bar edge coordinates
+    draw = ImageDraw.Draw(flag)
+    draw.rectangle((0, 0, p, height), RED)
+    draw.rectangle((p, 0, q, height), WHITE)
+    draw.rectangle((q, 0, width, height), BLUE)
+    flag.save("french_flag.png")
+
+
+if __name__ == '__main__':
+    french()
