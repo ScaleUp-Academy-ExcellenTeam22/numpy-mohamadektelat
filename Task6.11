@@ -1,0 +1,7 @@
+import numpy as np
+
+"""
+NumPy program to create a 3-D array with ones on a diagonal and zeros elsewhere.
+"""
+if __name__ == '__main__':
+    print(np.eye(3))
