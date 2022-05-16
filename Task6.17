@@ -1,0 +1,12 @@
+import numpy as np
+
+"""
+NumPy program to compute the median of flattened given array.
+"""
+if __name__ == '__main__':
+    array = np.arange(12).reshape((2, 6))
+    print("Original array:")
+    print(array)
+    median = np.median(array)
+    print("Median of said array:")
+    print(median)
