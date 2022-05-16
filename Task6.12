@@ -1,0 +1,7 @@
+import numpy as np
+
+"""
+NumPy program to remove single-dimensional entries from a specified shape
+"""
+if __name__ == '__main__':
+    print(np.squeeze(np.zeros((3, 1, 4))).shape)
