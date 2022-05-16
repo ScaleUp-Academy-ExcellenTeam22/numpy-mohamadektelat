@@ -1,0 +1,23 @@
+import numpy as np
+
+
+def replace(array, number, replacement_number) -> (tuple[int, int], int, int):
+    """
+    NumPy program to replace all numbers in a given array which is equal, less and greater to a given number
+    :param array:
+    :param number:
+    :param replacement_number:
+    :return: nothing
+    """
+    print("array before replacement:\n", array)
+    print(f"\nReplace elements that equals to {number} with {replacement_number}")
+    print(np.where(array == number, replacement_number, array))
+    print(f"\nReplace elements that less than {number} with {replacement_number}")
+    print(np.where(array < number, replacement_number, array))
+    print(f"\nReplace elements that greater than {number} with {replacement_number}")
+    print(np.where(array > number, replacement_number, array))
+
+
+if __name__ == '__main__':
+    array = np.arange(15).reshape(5, 3)
+    replace(array, 6, 0)
