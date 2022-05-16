@@ -1,0 +1,11 @@
+import numpy as np
+
+"""
+NumPy program to create a 4x4 array with random values,
+now create a new array from the said array swapping first and last rows
+"""
+if __name__ == '__main__':
+    matrix = np.arange(15, dtype=int).reshape(5, 3)
+    print("the first array: \n", matrix)
+    new_matrix = matrix[::-1]
+    print("the second array: \n", new_matrix)
