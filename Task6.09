@@ -1,0 +1,19 @@
+import numpy as np
+
+
+def multiply_matrix(first_array, second_array) -> (tuple[int, int], tuple[int, int]):
+    """
+    NumPy program to multiply two given arrays of same size element-by-element.
+    :param first_array:
+    :param second_array:
+    :return: nothing.
+    """
+    print("array1:\n", first_array)
+    print("array2:\n", second_array)
+    print("arrays after multiplication:\n", np.multiply(first_array, second_array))
+
+
+if __name__ == '__main__':
+    array1 = np.array([1, 2, 3])
+    array2 = np.array([5, 3, 4])
+    multiply_matrix(array1, array2)
