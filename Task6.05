@@ -1,0 +1,11 @@
+import numpy as np
+
+"""
+NumPy program to add a vector to each row of a given matrix
+"""
+if __name__ == '__main__':
+    matrix = np.zeros((5, 5), dtype=int)
+    vector = np.array([10, 10, 10, 10, 10])
+    print("matrix before adding the vector: \n", matrix)
+    matrix[0:, 0:] += vector
+    print("matrix after adding the vector: \n", matrix)
